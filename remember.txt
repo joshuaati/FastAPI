@@ -1,3 +1,3 @@
-To start the app, use uvicorn :: main:app --relaod
+To start the app, use :: uvicorn main:app --relaod
 To activate virtual environment :: venv\Scripts\activate
 Validation and serialization in FastApi can be done using Pydentic :: poetry add pydentic fastapi
