@@ -16,7 +16,7 @@ class User(Timestamp, Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    email = Column(String(100), unique=True, Index=True, nullable = False)
+    email = Column(String(100), unique=True, index=True, nullable = False)
     role = Column(Enum(Role))
 
     profile = relationship("Profile", back_populates="owner", uselist=False) ##uselist makse it a one to one relationship
