@@ -12,6 +12,8 @@ fastapi = "^0.88.0"
 pydentic = "^0.0.1.dev3"
 sqlalchemy = "^1.4.45"
 psycopg2-binary = "^2.9.5"
+sqlalchemy-utils = "^0.39.0"
+alembic = "^1.9.1"
 
 
 [build-system]
