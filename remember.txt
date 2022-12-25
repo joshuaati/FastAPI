@@ -3,3 +3,6 @@ To activate virtual environment :: venv\Scripts\activate
 Validation and serialization in FastApi can be done using Pydentic :: poetry add pydentic fastapi
 
 change the sqalchemy.url and target_metadata in the alembic env.py file to callback to your database models 
+
+alembic upgrade head to migrate the database to postgresql
+alembic downgrade base to remove the database from postgresql
