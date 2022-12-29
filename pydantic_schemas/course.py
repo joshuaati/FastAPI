@@ -11,6 +11,12 @@ class CourseBase(BaseModel):
 class CourseCreate(CourseBase):
     ...
 
+
+class CourseUpdate(BaseModel):
+    title:str
+    description: Optional[str] = None
+
+
 class Course(CourseBase):
     id: int
 

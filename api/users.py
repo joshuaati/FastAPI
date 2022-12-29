@@ -22,7 +22,7 @@ async def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_
 
 
 @router.post("/users", response_model=User, status_code=201)
-async def create_new_user(user: UserCreate, db: Session = Depends(get_db)):
+async def create_new_user(user: UserCreate, db: AsyncSession = Depends(get_db)):
     db_user = get_user_by_email(db=db, email=user.email)
     if db_user:
         raise HTTPException(status_code=400, detail="Email is already registered")

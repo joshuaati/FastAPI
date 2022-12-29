@@ -13,8 +13,10 @@ async def get_user(db: AsyncSession, user_id: int):
     return result.scalar_one_or_none()
 
 
-def get_user_by_email(db: Session, email: str):
-    return db.query(User).filter(User.email == email).first()
+async def get_user_by_email(db: AsyncSession, email: str):
+    query = select(User).where(User.email == email)
+    result = await db.execute(query)
+    return result.scalar_one_or_none()
 
 
 def get_users(db: Session, skip: int = 0, limit: int = 100):
