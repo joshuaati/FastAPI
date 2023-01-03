@@ -35,7 +35,7 @@ def update_course(db: Session, course_id:int, course:CourseUpdate):
     db_course_upt.title = course.title
     db_course_upt.description = course.description
     db_course_upt.updated_at = datetime.utcnow()
-    # db_course_upt.user_id = course.user_id
+
 
     db.commit()
     db.close()
